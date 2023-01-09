@@ -13,16 +13,16 @@ jobs:
         include:
           - dockerfile: ./Dockerfile
             context: client
-            image: spg51/lab:fib-client
+            image: maciub/dockerrepo:fib-client
           - dockerfile: ./Dockerfile
             context: server
-            image: spg51/lab:fib-server
+            image: maciub/dockerrepo:fib-server
           - dockerfile: ./Dockerfile
             context: worker
-            image: spg51/lab:fib-worker
+            image: maciub/dockerrepo:fib-worker
           - dockerfile: ./Dockerfile
             context: nginx
-            image: spg51/lab:fib-router  
+            image: maciub/dockerrepo:fib-router  
     
     steps:
 
@@ -63,8 +63,8 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: multifib
-        environment_name: Multifib-env
+        application_name: multilib
+        environment_name: Multilib-env
         version_label: lab12
-        region: us-east-1
+        region: eu-north-1
         deployment_package: deploy.zip
