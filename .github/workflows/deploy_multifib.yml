@@ -13,16 +13,16 @@ jobs:
         include:
           - dockerfile: ./Dockerfile
             context: client
-            image: maciub/dockerrepo:fib-client
+            image: maciub/dockerrepo:fib-client:latest
           - dockerfile: ./Dockerfile
             context: server
-            image: maciub/dockerrepo:fib-server
+            image: maciub/dockerrepo:fib-server:latest
           - dockerfile: ./Dockerfile
             context: worker
-            image: maciub/dockerrepo:fib-worker
+            image: maciub/dockerrepo:fib-worker:latest
           - dockerfile: ./Dockerfile
             context: nginx
-            image: maciub/dockerrepo:fib-router  
+            image: maciub/dockerrepo:fib-router:latest
     
     steps:
 
