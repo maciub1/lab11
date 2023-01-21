@@ -65,6 +65,6 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: mbmultifib
         environment_name: Mbmultifib-env-1
-        version_label: xyz
+        version_label: zzz
         region: eu-north-1
         deployment_package: deploy.zip
