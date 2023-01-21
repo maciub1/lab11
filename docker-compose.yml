@@ -1,11 +1,11 @@
 version: "3"
 services:
   client:
-    image: "spg51/lab:fib-client"
+    image: "maciub/dockerrepo:fib-client"
     mem_limit: 128m
     hostname: client
   server:
-    image: "spg51/lab:fib-server"
+    image: "maciub/dockerrepo:fib-server"
     mem_limit: 128m
     hostname: api
     environment:
@@ -17,14 +17,14 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
   worker:
-    image: "spg51/lab:fib-worker"
+    image: "maciub/dockerrepo:fib-worker"
     mem_limit: 128m
     hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-    image: "spg51/lab:fib-nginx"
+    image: "maciub/dockerrepo:fib-router"
     mem_limit: 128m
     hostname: nginx
     ports:
